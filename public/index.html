@@ -218,7 +218,7 @@
           </a>
         </li>
         <li class="hover:bg-gry/10 -ml-4 -mr-4 rounded-md p-2">
-          <a href="" class="flex items-center gap-2">
+          <a href="javascript:void()" class="submenu-trigger flex items-center gap-2">
             <span>
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -237,6 +237,10 @@
             </span>
             <span>All user</span>
           </a>
+          <ul class="submenu hidden flex-col gap-3 mt-3 ml-8">
+            <li>add user</li>
+            <li>user active</li>
+          </ul>
         </li>
       </ul>
       <!-- menu other  -->
@@ -297,8 +301,8 @@
       class="absolute top-0 w-full flex-1 px-4 pt-9 md:w-[calc(100%-224px)] md:translate-x-56 md:px-16"
     >
       <!-- header  -->
-      <div class="text-dark flex items-center justify-between">
-        <div class="flex items-center gap-4">
+      <div class="text-dark flex items-center justify-between w-full">
+        <div class="flex items-center gap-4 flex-1">
           <button
             id="btnOpen"
             class="flex h-10 w-10 items-center justify-center rounded-full bg-gradient-to-bl from-indigo-400 to-indigo-700 font-bold text-white md:hidden"
@@ -307,9 +311,9 @@
           </button>
           <h1 class="text-dark text-4xl font-bold">Analytics</h1>
         </div>
-        <div class="flex items-center gap-3 text-sm">
-          <button
-            class="border-gry/5 hover:border-gry/20 flex items-center gap-2 rounded-md border bg-white px-4 py-2 shadow"
+        <div class="flex items-center justify-end gap-3 text-sm">
+          <button date-rangepicker
+            class="border-gry/5 hover:border-gry/20 flex items-center w-7/12 gap-2 rounded-md border px-4 md:py-0 py-0.5 bg-white shadow flex-shrink-0"
           >
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -317,7 +321,7 @@
               viewBox="0 0 24 24"
               stroke-width="1"
               stroke="currentColor"
-              class="h-5 w-5"
+              class="h-5 w-5 flex-shrink-0"
             >
               <path
                 stroke-linecap="round"
@@ -325,15 +329,18 @@
                 d="M6.75 3v2.25M17.25 3v2.25M3 18.75V7.5a2.25 2.25 0 012.25-2.25h13.5A2.25 2.25 0 0121 7.5v11.25m-18 0A2.25 2.25 0 005.25 21h13.5A2.25 2.25 0 0021 18.75m-18 0v-7.5A2.25 2.25 0 015.25 9h13.5A2.25 2.25 0 0121 11.25v7.5"
               />
             </svg>
-            <span class="hidden md:block"> Oct - 15 Oct 2023</span>
-
+            <span class="flex items-center justify-between">
+              <input type="text" class="outline-none border-none focus:ring-0 w-6/12 text-sm" placeholder="Date start">
+              <span class="font-black">-</span>
+              <input type="text" class="outline-none border-none focus:ring-0 w-6/12 text-sm" placeholder="Date end">
+            </span>
             <svg
               xmlns="http://www.w3.org/2000/svg"
               fill="none"
               viewBox="0 0 24 24"
               stroke-width="1.5"
               stroke="currentColor"
-              class="h-4 w-4"
+              class="h-4 w-4 flex-shrink-0"
             >
               <path
                 stroke-linecap="round"
@@ -966,7 +973,7 @@
         </div>
       </div>
     </main>
-
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.8.1/datepicker.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <script>
       const ctx = document.getElementById("myChart");
@@ -992,6 +999,8 @@
         },
       });
     </script>
+
     <script src="dist/js/script.js"></script>
+
   </body>
 </html>

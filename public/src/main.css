@@ -3,8 +3,8 @@
 @tailwind components;
 @tailwind utilities;
 
-@layer components{
-  .transisi{
+@layer components {
+  .transisi {
     @apply transition duration-200;
   }
 }
